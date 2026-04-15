@@ -190,9 +190,9 @@ export const sidebar = [
 				],
 			}),
 			group('guide.database', { autogenerate: { directory: 'guides/database' } }),
+			group('guide.computational-logic', { autogenerate: { directory: 'guides/computational-logic' } }),
 			group('guide.development', { autogenerate: { directory: 'guides/development' } }),
 			group('guide.contributing', { autogenerate: { directory: 'guides/contribute' } }),
-			group('guide.computational-logic', { autogenerate: { directory: 'guides/computational-logic' } }),
 		],
 	}),
 
