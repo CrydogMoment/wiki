@@ -8,9 +8,9 @@ export default {
 	'guide.javascript': 'JS/TS',
 	'guide.database': 'Databases',
 	'guide.development': 'Software Development',
+	'guide.computational-logic' : 'Computational Logic',
 	'guide.contributing': 'Contribute to this Wiki',
 	'guide.3dgames' : '3D Game Development',
-	'guide.computational-logic' : 'Computational Logic',
 
 
 	ncea: 'NCEA',
