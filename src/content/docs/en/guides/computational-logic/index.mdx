@@ -19,7 +19,35 @@ In a computer, a 1 is stored as a HI voltage (anything above zero volts), and a 
 
 ## So what does a binary number look like then? 
 
-**It's actually more familiar than you may think. **
+**It's actually more familiar than you may think...**
+
+In broad strokes, it actually works the same way as our number system. A number in base 10 is actually list of multiples of each 10's place in the number. So for example, 12,526 has:
+- 1 x Thousands
+- 2 x Thousands
+- 5 x Hundreds
+- 2 x Tens 
+- 6 x Ones
+
+Now binary is the same, but instead it can only say whether there is a multiple, rather than how many. 
+
+So, if we take the same number in binary, it will look like: 
+
+### **11000011101110**
+
+Now, instead of multiplying the previous place by **10** in binary, since binary is a **base 2** system, we multiply it by 2. 
+
+So in Base 10:  
+
+|10,000 | 1,000  |100  |10  |1  |
+|---    |---     |---  |--- |---|
+|   1   |  2     |  5  | 2  | 6 |
+
+And in Base 2 (binary):
+
+|8192|4096|2048|1024|512 |256 |128 |64  |32 |16 |8  |4  |2  |1  |
+|--- |--- |--- |--- |--- |--- |--- |--- |---|---|---|---|---|---|
+|  1 |  1 |  0 |  0 |  0 |  0 |  1 |  1 | 1 | 0 | 1 | 1 | 1 | 0 |
+ 
 
 ## What is a logic gate? 
 
@@ -27,6 +55,8 @@ In a computer, a 1 is stored as a HI voltage (anything above zero volts), and a 
 ### **NOT GATE**
 
 A NOT gate is exactly as it sounds, it outputs the opposite of whatever goes in.  
+
+![NOT gate image](https://en.wikipedia.org/wiki/Inverter_%28logic_gate%29#/media/File:Not-gate-en.svg)
 
 | A 	| OUT |
 |---	|---	|
@@ -59,3 +89,12 @@ A NOT gate is exactly as it sounds, it outputs the opposite of whatever goes in.
 
 ## Creating things with logic gates: 
 
+
+
+# STUFF TO DELETE MAYBE???
+
+ **In our usual (base ten) system, when you pass the number 9, you go to 10, pass 99, you go to 10 x 10. Pass 999, you go to 10 x 10 x 10.  There is a sensible pattern here.**
+
+You multiply 10 by itself once for every digit in the previous number. Also known as 10 to the power of the previous number. 
+
+Binary works in much the same way, except it counts up when it passes the number 1. So when you pass 1, you go to 2, then when you pass 2, you go to 2 x 2, pass 4, 2 x 2 x 2.**
