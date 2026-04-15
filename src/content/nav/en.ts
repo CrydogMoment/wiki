@@ -10,6 +10,7 @@ export default {
 	'guide.development': 'Software Development',
 	'guide.contributing': 'Contribute to this Wiki',
 	'guide.3dgames' : '3D Game Development',
+	'guide.computational-logic' : 'Computational Logic',
 
 
 	ncea: 'NCEA',
