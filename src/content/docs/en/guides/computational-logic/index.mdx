@@ -1,6 +1,6 @@
 ---
 title: Computational Logic
-description: Introduction to logic gates and binary 
+description: Introduction to binary 
 sidebar:
   order: 0
 ---
@@ -13,15 +13,17 @@ Binary is the foundation of every computer's operation, be it a mobile phone, an
 On its own, binary can look quite confusing as a seemingly random collection of ones and zeroes, but to a computer it is just like reading plain text.
 Binary is just another way of representing a number. While we represent numbers using a combination of 0-9, binary only uses 0 and 1. 
 
-:::tip[How is it stored then?] 
-In a computer, a 1 is stored as a HI voltage (anything above zero volts), and a zero as a LO voltage (zero volts).
+:::tip[How is it physically stored then?] 
+In a computer, a 1 is stored as a [HI voltage](https://en.wikipedia.org/wiki/Logic_level) (anything above zero volts), and a zero as a LO voltage (zero volts).
 :::
 
 ## So what does a binary number look like then? 
 
 **It's actually more familiar than you may think...**
 
-In broad strokes, it actually works the same way as our number system. A number in base 10 is actually list of multiples of each 10's place in the number. So for example, 12,526 has:
+In broad strokes, it actually works the same way as our number system. A number in base 10 is actually list of multiples of each 10's place in the number. 
+
+So for example, **12,526** has:
 - 1 x Thousands
 - 2 x Thousands
 - 5 x Hundreds
@@ -30,9 +32,9 @@ In broad strokes, it actually works the same way as our number system. A number 
 
 Now binary is the same, but instead it can only say whether there is a multiple, rather than how many. 
 
-So, if we take the same number in binary, it will look like: 
-
-### **11000011101110**
+**So, if we take the same number in binary, it will look like:** 
+ 
+ **11000011101110**
 
 Now, instead of multiplying the previous place by **10** in binary, since binary is a **base 2** system, we multiply it by 2. 
 
@@ -49,52 +51,9 @@ And in Base 2 (binary):
 |  1 |  1 |  0 |  0 |  0 |  0 |  1 |  1 | 1 | 0 | 1 | 1 | 1 | 0 |
  
 
-## What is a logic gate? 
+In binary, counting looks like this:
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Binary_counter.gif" alt="Binary Counting Example" width="200"/>
 
+## So what can we do with it? 
 
-### **NOT GATE**
-
-A NOT gate is exactly as it sounds, it outputs the opposite of whatever goes in.  
-
-![NOT gate image](https://en.wikipedia.org/wiki/Inverter_%28logic_gate%29#/media/File:Not-gate-en.svg)
-
-| A 	| OUT |
-|---	|---	|
-| 0 	| 1 	|
-| 1 	| 0 	|
-
-### **AND GATE** 
-| A 	| B 	| OUT |
-|---	|---	|---	|
-| 0 	| 0 	| 0 	|
-| 1 	| 0 	| 0 	|
-| 0 	| 1 	| 0 	|
-| 1 	| 1 	| 1 	|
-
-### **OR GATE** 
-| A 	| B 	| OUT |
-|---	|---	|---	|
-| 0 	| 0 	| 0 	|
-| 1 	| 0 	| 1 	|
-| 0 	| 1 	| 1 	|
-| 1 	| 1 	| 1 	|
-
-### **XOR GATE**
-| A 	| B 	| OUT |
-|---	|---	|---	|
-| 0 	| 0 	| 0 	|
-| 1 	| 0 	| 0 	|
-| 0 	| 1 	| 0 	|
-| 1 	| 1 	| 1 	|
-
-## Creating things with logic gates: 
-
-
-
-# STUFF TO DELETE MAYBE???
-
- **In our usual (base ten) system, when you pass the number 9, you go to 10, pass 99, you go to 10 x 10. Pass 999, you go to 10 x 10 x 10.  There is a sensible pattern here.**
-
-You multiply 10 by itself once for every digit in the previous number. Also known as 10 to the power of the previous number. 
-
-Binary works in much the same way, except it counts up when it passes the number 1. So when you pass 1, you go to 2, then when you pass 2, you go to 2 x 2, pass 4, 2 x 2 x 2.**
+What we can do with binary is maths, and with maths we can do anything. All computer programs at their simplest level rely on maths, from watching a video to playing a video game. To start getting into how all of this works, we'll first look at logic gates, and how we can manipulate binary data. 
