@@ -64,39 +64,3 @@ An XOR gate outputs 1 when the two inputs are different. This is known as an exc
 ## Creating things with logic gates: 
 
 As mentioned in the previous page, with binary we can do maths. Logic gates are our tool to manipulating numbers in any way we need. We can add, subtract, multiply, and divide. Using this, and With the sheer power of computers, we can do in seconds what would take a person days. 
-
-## Adding numbers in binary 
-
-Say we want to add two numbers together, we can use a circuit called an **adder**. There are two main types: The half adder and the full adder. 
-
-So how can we add a number? What do we need to check? 
-
-Let's start by looking at one set of bits. If none are on, easy, no output. If only one is on, then the output should be 1. But if both are on, then we must move up an order of magnitude. 
-
-:::tip[Think it like adding 5's]
-
-So 5 + 0 is just an output of 5. 
-
-But 5 + 5 is an output of 0 in the one's place, and an output of 1 in the 10's place. This is known as a **carry**. Since we *carry* the result up one order of magnitude. 
-:::
-
-Binary works much the same.
-
-So now, how do we actually add these numbers? Let's work through logically. We will have two outputs, called **Carry** and **Sum**. Where sum is the result of the addition in the same place, and carry is the output to the next place up.
-
-So, let's go through out conditions from before. 
-
-- If both inputs are on, we output 0 to sum, 1 to carry. 
-- If only one input is on, we output 1 to sum, 0 to carry. 
-- if neither inputs are on, we output to neither sum nor carry. 
-
-## What logic gates do we need? 
-
-Let's break down the previous sentences. 
-
-If input A AND input B are on, output 1.
-
-If exclusively input A or exclusively input B is on, output 1. 
-
-
-<details><summary>So we need: </summary>An AND gate and an XOR gate!</details>
