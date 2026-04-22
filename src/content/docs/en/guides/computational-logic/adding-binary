@@ -77,19 +77,37 @@ Let's start this time with the truth table:
 | 1 	  | 1 	  |    1      | 1 	    |   1        |
 
 
+:::tip[Arranging truth tables]
+
+When writing truth tables, there is a nice pattern we can use that keeps it clear. As you can see above the first input will alternate every column, the second every second, and the third every fourth. If we had a fourth input then, it would alternate every eighth column and so forth, doubling each time. 
+:::
+
 So, these are definitely a lot more complicated, but we can still break down the logic:
 
 - if only one input is on, output to sum.
 - if two are on, output to carry.
-- if all three are one, output to carry and sum. 
+- if all three are on, output to carry and sum. 
 
-:::tip[Arranging truth tables]
-
-When writing truth tables, there is a nice pattern we can use that keeps it clear. As you can see above the first input will alternate every column, the second every second, and the third every fourth. If we had a fourth input then, it would alternate every eighth column and so forth, doubling each time. 
-
-:::
+So, let's break down what each logic gates' role is in this diagram: 
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Full-adder_logic_diagram.svg/250px-Full-adder_logic_diagram.svg.png" alt="Binary full adder" width="200"/>
+
+- XOR 1 (Top left):
+  
+  - Outputs 1 when either A or B is on, which means sum OR carry will be 1. 
+
+- XOR 2 (Top right):
+  - Outputs 1 when XOR 1 outputs true, (so only A or B are on) or the carry in is on. This means we will only have one one input on, so we output to SUM.
+
+- AND 1 (Middle):
+  - Outputs 1 when either A or B is on, and Carry in is on. This means we must have a Carry out.
+
+- AND 2 (Bottom):
+  - Outputs 1 when both A AND B are on, which means we must have a carry.
+
+- OR (Bottom right):
+  - Outputs 1 when AND 1 OR AND 2 are on. This is not an exclusive OR, so if they are both on it will still output 1. 
+
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Fulladder.gif" alt="Binary full adder in action" width="200"/>
 
