@@ -22,7 +22,7 @@ But 5 + 5 is an output of 0 in the one's place, and an output of 1 in the 10's p
 
 Binary works much the same.
 
-So now, how do we actually add these numbers? Let's work through logically. We will have two outputs, called **Carry** and **Sum**. Where sum is the result of the addition in the same place, and carry is the output to the next place up.
+So now, how do we actually add these numbers? Let's work through logically. We will have two outputs, called **carry** and **sum**. Where sum is the result of the addition in the same place, and carry is the output to the next place up.
 
 So, let's go through out conditions from before. 
 
@@ -34,9 +34,64 @@ So, let's go through out conditions from before.
 
 Let's break down the previous sentences. 
 
-If input A AND input B are on, output 1.
+If input A AND input B are on, output 1 to **CARRY**.
 
-If exclusively input A or exclusively input B is on, output 1. 
+If exclusively input A or exclusively input B is on, output 1 to **SUM**. 
 
+So our truth table will look like this:
+
+|A (in) |B (in) |SUM (out)| CARRY (out)|
+|---	  |---	  |---	    |---         |
+| 0 	  | 0 	  | 0 	    |   0        |
+| 1 	  | 0 	  | 1 	    |   0        |
+| 0 	  | 1 	  | 1 	    |   0        |
+| 1 	  | 1 	  | 0 	    |   1        |
 
 <details><summary>So we need: </summary>An AND gate and an XOR gate!</details>
+
+So then, our circuit will simply be these two logics gates in parallel. So now, we can add!
+
+Though you may have noticed before there was a mention of a carry bit. So currently what we have is called a '**half adder**'. A half adder can only add the first bits of a binary number, since it cannot account for the carry from the previous bits. 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Half_Adder.svg/250px-Half_Adder.svg.png" alt="Binary half adder" width="200"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Halfadder.gif" alt="Binary half adder in action" width="200"/>
+
+
+
+### The full adder
+
+A full adder is a little more complex, though it is needed to be able to properly add two binary numbers. For a full adder, we also need to be able to account for a third input, the **Carry IN**.
+
+
+Let's start this time with the truth table: 
+
+|A (in) |B (in) |Carry (in) |SUM (out)| CARRY (out)|
+|---	  |---	  |---        |---	    |---         |
+| 0 	  | 0 	  |    0      | 0 	    |   0        |
+| 1 	  | 0 	  |    0      | 1 	    |   0        |
+| 0 	  | 1 	  |    0      | 1 	    |   0        |
+| 1 	  | 1 	  |    0      | 0 	    |   1        |
+| 0 	  | 0 	  |    1      | 1 	    |   0        |
+| 1 	  | 0 	  |    1      | 0 	    |   1        |
+| 0 	  | 1 	  |    1      | 0 	    |   1        |
+| 1 	  | 1 	  |    1      | 1 	    |   1        |
+
+
+So, these are definitely a lot more complicated, but we can still break down the logic:
+
+- if only one input is on, output to sum.
+- if two are on, output to carry.
+- if all three are one, output to carry and sum. 
+
+:::tip[Arranging truth tables]
+
+When writing truth tables, there is a nice pattern we can use that keeps it clear. As you can see above the first input will alternate every column, the second every second, and the third every fourth. If we had a fourth input then, it would alternate every eighth column and so forth, doubling each time. 
+
+:::
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Full-adder_logic_diagram.svg/250px-Full-adder_logic_diagram.svg.png" alt="Binary full adder" width="200"/>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Fulladder.gif" alt="Binary full adder in action" width="200"/>
+
+
+

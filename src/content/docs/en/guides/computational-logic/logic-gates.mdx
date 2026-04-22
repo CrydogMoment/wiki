@@ -11,11 +11,15 @@ A [logic gate](https://en.wikipedia.org/wiki/Logic_gate) is an electrical device
 Technically, just one type of gate is needed. Every logic circuit can be made from just NAND gates, though it does make things a lot more confusing, if you can make a NAND gate in something, you can make a computer. 
 :::
 
+We can visualize our outputs with something called a '**truth table**'. A truth table shows all the combinations of input bits, and what the resulting output for each state will be. 
+
 ### **NOT GATE**
 
 A NOT gate is exactly as it sounds, it outputs the opposite of whatever goes in.  
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/NOT_ANSI_Labelled.svg/120px-NOT_ANSI_Labelled.svg.png" width="200" alt="picture of a NOT gate"/>
+
+**Truth Table:**
 
 | A 	| OUT |
 |---	|---	|
@@ -27,6 +31,8 @@ A NOT gate is exactly as it sounds, it outputs the opposite of whatever goes in.
 An AND gate will only output 1 when all inputs are 1. In this case, we use a 2 input AND gate, but they can have any number of inputs. 
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/AND_ANSI_Labelled.svg/120px-AND_ANSI_Labelled.svg.png" width="200" alt="picture of an AND gate"/>
+
+**Truth Table:**
 
 | A 	| B 	| OUT |
 |---	|---	|---	|
@@ -41,6 +47,8 @@ An AND gate will only output 1 when all inputs are 1. In this case, we use a 2 i
 
 An OR gate outputs 1 when either or both of the inputs are 1. This is known as an inclusive or. 
 
+**Truth Table:**
+
 | A 	| B 	| OUT |
 |---	|---	|---	|
 | 0 	| 0 	| 0 	|
@@ -53,6 +61,8 @@ An OR gate outputs 1 when either or both of the inputs are 1. This is known as a
 <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/XOR_ANSI_Labelled.svg/120px-XOR_ANSI_Labelled.svg.png" width ="200" alt="picture of an OR gate"/>
 
 An XOR gate outputs 1 when the two inputs are different. This is known as an exclusive or. 
+
+**Truth Table:**
 
 | A 	| B 	| OUT |
 |---	|---	|---	|
